@@ -42,6 +42,7 @@ export default {
     toFrom() {
       let data = {};
       data.action = 'create';
+      this.$store.dispatch('emptyhouse')
       this.$store.dispatch('setStatus', data)
       this.$router.push('/form')
     },

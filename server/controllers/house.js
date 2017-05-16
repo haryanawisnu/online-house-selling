@@ -37,7 +37,8 @@ let houseControllers = {
             name: req.body.name || result.name,
             phone: req.body.phone || result.phone,
             img: req.body.img || result.img,
-            location: req.body.location || result.location
+            lat: req.body.lat || result.lat,
+            lang: req.body.lang || result.lang
           }
         }, function(err, result) {
           if (result) {
@@ -59,7 +60,8 @@ let houseControllers = {
       name: req.body.name,
       phone: req.body.phone,
       img: req.body.img,
-      location: req.body.location
+      lat: req.body.lat,
+      lang: req.body.lang
     }, function(err, result) {
       if (result) {
         res.send(result);

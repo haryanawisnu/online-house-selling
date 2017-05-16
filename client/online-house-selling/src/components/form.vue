@@ -106,8 +106,10 @@ export default {
   },
   methods: {
     mapClicked(mouseArgs) {
-      console.log('map lat', mouseArgs.latLng.lat());
-      console.log('map lng', mouseArgs.latLng.lng());
+      this.house.lat = mouseArgs.latLng.lat();
+      this.house.lang = mouseArgs.latLng.lng();
+      // console.log('map lat', mouseArgs.latLng.lat());
+      // console.log('map lng', mouseArgs.latLng.lng());
       this.markers.pop();
       this.markers.push({
         position: {
@@ -115,7 +117,7 @@ export default {
           lng: mouseArgs.latLng.lng()
         },
         opacity: 1,
-        enabled: true,
+        enabled: true
       });
       let self = this;
       setTimeout(function() {

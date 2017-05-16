@@ -34,6 +34,17 @@ export const store = new Vuex.Store({
         state.house = state.list_house[data.index];
       }
       state.status = data.action
+    },
+    emptyhouse(state) {
+      state.house._id = ''
+      state.house.title = ''
+      state.house.price = ''
+      state.house.description = ''
+      state.house.name = ''
+      state.house.phone = ''
+      state.house.img = ''
+      state.house.lat = -6.260708
+      state.house.lang = 106.781638
     }
   },
   actions: {
@@ -46,7 +57,9 @@ export const store = new Vuex.Store({
           description: data.description,
           name: data.name,
           phone: data.phone,
-          img: data.img
+          img: data.img,
+          lat: data.lat,
+          lang: data.lang
         })
         .then(function(response) {
           console.log('Masuk ' + JSON.stringify(response));
@@ -65,7 +78,9 @@ export const store = new Vuex.Store({
           description: data.description,
           name: data.name,
           phone: data.phone,
-          img: data.img
+          img: data.img,
+          lat: data.lat,
+          lang: data.lang
         })
         .then(function(response) {
           console.log('Update ' + JSON.stringify(response));
@@ -97,6 +112,11 @@ export const store = new Vuex.Store({
       commit
     }, data) {
       commit('setStatus', data);
+    },
+    emptyhouse({
+      commit
+    }) {
+      commit('emptyhouse');
     }
   },
   getters: {

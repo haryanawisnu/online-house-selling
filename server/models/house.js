@@ -8,7 +8,8 @@ let houseSchema = new Schema({
   name: String,
   phone: String,
   img: String,
-  location: String
+  lat: Number,
+  lang: Number
 });
 
 let House = mongoose.model('House', houseSchema);
