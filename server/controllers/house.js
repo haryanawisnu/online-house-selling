@@ -34,8 +34,9 @@ let houseControllers = {
             title: req.body.title || result.title,
             price: req.body.price || result.price,
             description: req.body.description || result.description,
-            author: req.body.author || result.author,
+            name: req.body.name || result.name,
             phone: req.body.phone || result.phone,
+            img: req.body.img || result.img,
             location: req.body.location || result.location
           }
         }, function(err, result) {
@@ -55,8 +56,9 @@ let houseControllers = {
       title: req.body.title,
       price: req.body.price,
       description: req.body.description,
-      author: req.body.author,
+      name: req.body.name,
       phone: req.body.phone,
+      img: req.body.img,
       location: req.body.location
     }, function(err, result) {
       if (result) {

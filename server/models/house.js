@@ -5,8 +5,9 @@ let houseSchema = new Schema({
   title: String,
   price: String,
   description: String,
-  author: String,
+  name: String,
   phone: String,
+  img: String,
   location: String
 });
 
