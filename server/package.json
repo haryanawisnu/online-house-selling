@@ -4,7 +4,8 @@
   "description": "online house selling",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js",
+    "test": "NODE_ENV=test mocha"
   },
   "keywords": [
     "vuex"
